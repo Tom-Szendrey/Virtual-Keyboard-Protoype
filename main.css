@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+span.smalltext,
+span.mediumtext {
+    margin-left: -1rem;
+    display: inline-block;
+}
+
+span.mediumtext {
+    font-size: 1.5rem
+}
+
+span.smalltext {
+    font-size: 1.25rem;
+}
+
+#keyboard.minimized {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+#keyboard.minimized .keyboard__main {
+    height: 0;
+    width: 0;
+    overflow: hidden;
+}
+#keyboard.minimized .keyboard__menu ul:first-child {
+    display: none;
+}
+
+
+#shift {
+    display: none;
+}
+
+#textbox {
+    margin-top: 10rem;
+    text-align: left;
+    width: calc(50% - 2rem);
+    padding: .5rem 1rem;
+    font-size: 2rem;
+}
+
+#title {
+    color: white;
+    padding: .5rem;
+    height: 2rem;
+    display: inline-block;
+}
+
+.btn, .key, .keyboard__menu li, .submenu ul li {
+    user-select: none;
+}
+
+.btn {
+    background-color: #003d5e;
+    padding: 1rem;
+    margin: 0 .5rem;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #4f8297;
+}
+
+.btn-group {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.dialog {
+    background-color: black;
+    display: none;
+    color: white;
+    text-align: left;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.dialog__inner {
+    padding: 1rem;
+}
+
+.dialog p {
+    color: #999;
+    border-bottom: 1px solid #999;
+    padding: .5rem 1rem;
+}
+
+.dialog input {
+    margin: 1rem;
+}
+
+#keyboard {
+    background-color: black;
+    display: inline-block;
+    margin-top: 2rem;
+    text-align: left;
+    position: relative;
+}
+
+#keyboard .keyboard__main {
+    position: relative;
+}
+
+#keyboard .keyboard__menu {
+    background-color: black;
+    text-align: left;
+    border-bottom: 2px solid #999;
+    height: 2rem;
+}
+
+.keyboard__menu ul {
+    display: inline-block;
+    float: left;
+    height: 2rem;
+}
+
+.keyboard__menu ul:last-child {
+    float: right;
+}
+
+.keyboard__menu ul:last-child li {
+    border: none;
+    border-left: 1px solid #999;
+}
+
+.keyboard__menu ul li {
+    height: 1rem;
+    display: inline-block;
+    color: #999;
+    cursor: pointer;
+    padding: .5rem .5rem;
+    border-right: 1px solid #999;
+    float: left;
+}
+
+.keyboard__menu ul li:hover {
+    background-color: #383838;
+    color: white;
+}
+
+.keyboard__menu ul li.highlighted {
+    background-color: #383838;
+}
+
+#keyboard .keyboard__keys {
+    text-align: left;
+    padding: .5rem 2rem;
+    z-index: 0;
+}
+
+.key {
+    position: relative;
+    display: inline-block;
+    margin: .25rem .25rem;
+    padding: 1rem;
+    background-color: #003d5e;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.5rem;
+    width: 2rem;
+    height: 2rem;
+    overflow-wrap: break-word;
+}
+
+.key:hover {
+    background-color: #4f8297;
+}
+
+.key.show-x::after {
+    display: block;
+}
+
+#shift.show-x::after, #shift--qwerty.show-x::after {
+    display: none;
+}
+
+.key::after {
+    content: '×';
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #b96464;
+    transform: translateX(50%) translateY(-50%);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.key:hover::after {
+    background-color: tomato;
+}
+
+.key#shift, .key#shift--qwerty {
+    width: 5rem;
+}
+
+.qwerty__row:nth-child(1), .qwerty__row:nth-child(3) {
+    margin-left: 2.25rem;
+}
+
+.submenu {
+    background-color: #383838;
+    color: white;
+    text-align: left;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.submenu li {
+    padding: .25rem .5rem;
+    cursor: pointer;
+}
+
+.submenu li:hover {
+    background-color: #707070
+}
+
+#title {
+    color: white;
+    padding: .5rem;
+    height: 2rem;
+    display: inline-block;
+}

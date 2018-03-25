@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CISC 325 Milestone 5</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="main.js"></script>
+</head>
+<body>
+    <input type='text' id='textbox'>
+    <br>
+    <div id='keyboard'>
+        <div class='keyboard__menu'>
+            <ul>
+                <li id='addkey' style='display: inline-block;'>Add Key</li>
+                <li id='deletekey' style='display: inline-block;'>Delete Key</li>
+                <li id='togglekeyboard'>Toggle Keyboard</li>
+            </ul>
+            <span id='title' style='display: none;'>On-Screen Keyboard</span>
+            <ul>
+                <li id='minimize'>_</li>
+                <li id='close'>X</li>
+            </ul>
+        </div>
+        <div class='keyboard__main'>
+            <div class='submenu' id='addkey-menu'>
+                <ul>
+                    <li id='addkey-menu__add'>Add Custom Key</li>
+                    <li id='addkey-menu__toggleshift'>Toggle Shift Key</li>
+                </ul>
+            </div>
+            <div class='keyboard__keys'>
+                <div id='keyboard__keys--custom' style='display: inline-block;'>
+                    <div class='key' id='shift'><span>shift</span></div>
+                </div>
+                <div id='keyboard__keys--qwerty' style='display: none;'>
+                    <div class='qwerty__row'>
+                        <div class='key'><span>1</span></div>
+                        <div class='key'><span>2</span></div>
+                        <div class='key'><span>3</span></div>
+                        <div class='key'><span>4</span></div>
+                        <div class='key'><span>5</span></div>
+                        <div class='key'><span>6</span></div>
+                        <div class='key'><span>7</span></div>
+                        <div class='key'><span>8</span></div>
+                        <div class='key'><span>9</span></div>
+                        <div class='key'><span>0</span></div>
+                        <div class='key'><span>-</span></div>
+                    </div>
+                    <div class='qwerty__row'>
+                        <div class='key'><span>q</span></div>
+                        <div class='key'><span>w</span></div>
+                        <div class='key'><span>e</span></div>
+                        <div class='key'><span>r</span></div>
+                        <div class='key'><span>t</span></div>
+                        <div class='key'><span>y</span></div>
+                        <div class='key'><span>u</span></div>
+                        <div class='key'><span>i</span></div>
+                        <div class='key'><span>o</span></div>
+                        <div class='key'><span>p</span></div>
+                        <div class='key'><span>[</span></div>
+                        <div class='key'><span>]</span></div>
+                    </div>
+                    <div class='qwerty__row'>
+                        <div class='key'><span>a</span></div>
+                        <div class='key'><span>s</span></div>
+                        <div class='key'><span>d</span></div>
+                        <div class='key'><span>f</span></div>
+                        <div class='key'><span>g</span></div>
+                        <div class='key'><span>h</span></div>
+                        <div class='key'><span>j</span></div>
+                        <div class='key'><span>k</span></div>
+                        <div class='key'><span>l</span></div>
+                        <div class='key'><span>;</span></div>
+                        <div class='key'><span>'</span></div>
+                    </div>
+                    <div class='qwerty__row'>
+                        <div class='key' id='shift--qwerty'><span>shift</span></div>
+                        <div class='key'><span>z</span></div>
+                        <div class='key'><span>x</span></div>
+                        <div class='key'><span>c</span></div>
+                        <div class='key'><span>v</span></div>
+                        <div class='key'><span>b</span></div>
+                        <div class='key'><span>n</span></div>
+                        <div class='key'><span>m</span></div>
+                        <div class='key'><span>,</span></div>
+                        <div class='key'><span>.</span></div>
+                        <div class='key'><span>/</span></div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class='dialog' id='addkey-dialog'>
+                <p>Add Key</p>
+                <div class='dialog__inner'>
+                    <input type='text' id='addkey-text'>
+                    <div class='btn' id='addkey__add'>Add</div>
+                    <div class='btn' id='addkey__cancel'>Cancel</div>
+                </div>
+            </div>
+    </div>
+    
+</body>
+</html>
